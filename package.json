@@ -1,0 +1,29 @@
+{
+  "name": "ggeventmanager",
+  "version": "1.0.0",
+  "description": "This pakage creates a discord bot that allows users to create event announcements and RSVP for events.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsc && node dist/index.js",
+    "build": "npx tsc",
+    "dev": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arsh-deeps/GGEventManager.git"
+  },
+  "author": "Arshdeep Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arsh-deeps/GGEventManager/issues"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3"
+  },
+  "homepage": "https://github.com/arsh-deeps/GGEventManager#readme"
+}
