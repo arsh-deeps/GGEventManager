@@ -1,5 +1,5 @@
 import { EmbedBuilder } from 'discord.js';
-import { Event } from '../Event';
+import { Event } from '../model/Event';
 
 export function buildEventsEmbed(eventList: Event[]): EmbedBuilder {
     const embed = new EmbedBuilder()
@@ -9,7 +9,7 @@ export function buildEventsEmbed(eventList: Event[]): EmbedBuilder {
     eventList.forEach((e, i) => {
         const attendees = e.attendees.length > 0 ? e.attendees.map(attendee => `<@${attendee.id}>`).join(', ') : "No attendees yet.";
         embed.addFields(
-            { name: ` ${i + 1}️⃣ 📅${e.name}`, value: `<t:${e.timestamp}:F>`, inline: false },
+            { name: ` ${i + 1}️⃣ 📅  ${e.name}`, value: `<t:${e.timestamp}:F>`, inline: false },
             { name: 'Attendees', value: attendees, inline: false }
         );
     });

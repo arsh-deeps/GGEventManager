@@ -1,5 +1,5 @@
 import { events } from '..';
-import { client } from '../client.1';
+import { client } from '../client';
 
 export async function fetchAndCacheExistingEvents() {
     for (const eventId in events) {

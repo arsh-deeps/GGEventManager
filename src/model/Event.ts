@@ -1,4 +1,4 @@
-import { Attendee } from './Attendee';
+import { Attendee } from "./Attendee";
 
 export class Event {
     name: string;

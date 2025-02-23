@@ -53,8 +53,36 @@ GGEventManager is a Discord bot that allows users to create event announcements 
 3. Users can RSVP for events by reacting to the event message with the corresponding number emoji.
 4. Users can un-RSVP by removing their reaction.
 
+### New Commands
+
+- **/creategroupevents**: Create multiple events at once.
+    ```
+    /creategroupevents group: GroupName events: EventName1,Timestamp1;EventName2,Timestamp2
+    ```
+    Example:
+    ```
+    /creategroupevents group: Gaming events: AmongUs,1672531199;Valorant,1672617599
+    ```
+
+- **/listevents**: List all upcoming events.
+    ```
+    /listevents message_id: MessageID
+    ```
+    This command will display all upcoming events in the specified message, with buttons to send reminders for each event separately.
+
+
+- **/sendreminder**: Send a reminder to users who have RSVP'd for an event.
+    ```
+    /sendreminder message_id: MessageID event: EventName
+    ```
+    Example:
+    ```
+    /sendreminder message_id: 1234567890 event: Sketchful
+    ```
+
 ## Development
 
 To start the bot in development mode with TypeScript support, run:
 ```sh
 npm run dev
+```
